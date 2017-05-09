@@ -24,6 +24,7 @@
 		<java.version>1.8</java.version>
 		<org.apache.zookeeper.version>3.4.6</org.apache.zookeeper.version>
 		<com.github.sgroschupf.zkclient.version>0.1</com.github.sgroschupf.zkclient.version>
+		<spring-security-oauth2.version>2.0.3.RELEASE</spring-security-oauth2.version>
 	</properties>
 
 	<repositories>
@@ -130,7 +131,11 @@
 			<artifactId>kdm-service</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.security.oauth</groupId>
+			<artifactId>spring-security-oauth2</artifactId>
+			<version>${spring-security-oauth2.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
