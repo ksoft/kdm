@@ -7,6 +7,8 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.authentication.dao.ReflectionSaltSource;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -38,30 +40,29 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
 
-    /*@Override
+    @Override
     public void configure(WebSecurity web) throws Exception {
 
         web
                 .ignoring()
-                .antMatchers("/h2console*//**")
                 .antMatchers("/api/register")
                 .antMatchers("/api/activate")
                 .antMatchers("/api/lostpassword")
                 .antMatchers("/api/resetpassword")
                 .antMatchers("/api/hello");
 
-    }*/
+    }
 
-    /*@Override
+    @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-                .antMatchers("/login", "/auth/login", "/", "/api*//**").permitAll()
+                .antMatchers("/login", "/auth/login").permitAll()
                 .and().csrf().disable()
-                .formLogin().loginPage("/login").loginProcessingUrl("/auth/login").usernameParameter("username").passwordParameter("password")
+                .formLogin().successForwardUrl("/index").loginProcessingUrl("/auth/login").usernameParameter("username").passwordParameter("password")
                 .failureHandler(authenticationFailureHandler()).successHandler(authenticationSuccessHandler())
                 .and().exceptionHandling().accessDeniedPage("/Access_Denied");
-    }*/
+    }
 
     @Override
     @Bean

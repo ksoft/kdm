@@ -41,9 +41,3 @@ pagehelper:
   rowBoundsWithCount: true
 
 
-#Application specific
-authentication:
-  oauth:
-    clientid: rajithapp
-    secret: secret
-    tokenValidityInSeconds: 1800

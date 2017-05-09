@@ -1,4 +1,4 @@
-package com.ksoft.kdm.security;
+package com.ksoft.kdm.exception;
 
 import org.springframework.security.core.AuthenticationException;
 

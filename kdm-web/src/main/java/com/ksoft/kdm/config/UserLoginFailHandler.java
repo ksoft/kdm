@@ -1,7 +1,7 @@
 package com.ksoft.kdm.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ksoft.kdm.dto.ResponseData;
+import com.ksoft.kdm.common.dto.ResponseData;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.AuthenticationException;

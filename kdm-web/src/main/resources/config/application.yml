@@ -18,6 +18,12 @@ mvc:
 #development profile
 spring:
   profiles: dev
+  datasource:
+      username: root
+      password: 123456
+      url: jdbc:mysql://localhost:3306/kdm?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull
+      driver-class-name: com.mysql.jdbc.Driver
+
   freemarker:
     allow-request-override: false
     cache: false
@@ -27,6 +33,7 @@ spring:
     expose-request-attributes: false
     expose-session-attributes: false
     expose-spring-macro-helpers: false
+
 
 dubbo:
   app-name: kdm-comsummer
@@ -57,3 +64,10 @@ zcckj:
 swagger:
       doc-version: ${swaggerVersion}
       enabled: true
+
+#Application specific
+authentication:
+  oauth:
+    clientid: rajithapp
+    secret: secret
+    tokenValidityInSeconds: 1800
