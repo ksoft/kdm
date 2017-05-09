@@ -1,0 +1,42 @@
+spring:
+  profiles:
+    active: dev
+  session:
+    store-type: none
+logging:
+  config: classpath:config/logback-spring.xml
+---
+#development profile
+spring:
+  profiles: dev
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://171.188.0.167:3306/store_show?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull
+    driver-class-name: com.mysql.jdbc.Driver
+
+dubbo:
+  app-name: kdm-provider
+  group: test
+  protocol-name: dubbo
+  owner: kdm
+  service-group: kdm
+  zookeeper-address: zookeeper://127.0.0.1:2181 #zookeeper://171.188.0.161:2181
+  time-out: 100000
+
+mybatis:
+  config-location: config/mybatis-config.xml
+
+mapper:
+    mappers:
+        - com.ksoft.kdm.common.BaseMapper
+    not-empty: false
+    identity: MYSQL
+
+#pagehelper
+pagehelper:
+  #当该参数设置为 true 时，pageNum<=0 时会查询第一页， pageNum>pages（超过总数时），会查询最后一页
+  reasonable: false
+  #当该参数设置为true时，使用 RowBounds 分页会进行 count 查询
+  rowBoundsWithCount: true
+

@@ -1,0 +1,59 @@
+spring:
+  profiles:
+    active: dev
+  session:
+    store-type: none
+swaggerVersion: 1.0
+logging:
+  config: classpath:config/logback-spring.xml
+#Jackson配置
+spring.jackson:
+  #default-property-inclusion: non_default
+  date-format: yyyy-MM-dd HH:mm:ss
+#mvc
+mvc:
+  view:
+    suffix: .ftl
+---
+#development profile
+spring:
+  profiles: dev
+  freemarker:
+    allow-request-override: false
+    cache: false
+    check-template-location: true
+    encoding: utf-8
+    content-type: text/html
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: false
+
+dubbo:
+  app-name: kdm-comsummer
+  group: test
+  protocol-name: dubbo
+  owner: kdm
+  service-group: kdm
+  zookeeper-address: zookeeper://127.0.0.1:2181 #zookeeper://171.188.0.161:2181 #zookeeper://10.1.80.213:2181
+
+#redis:
+#    host: 171.188.0.166
+#    port: 6379
+#    database: 10
+
+server:
+  port: 8011
+  tomcat:
+    access_log_enabled: true
+    basedir: target/tomcat
+
+zcckj:
+  static-path: http://127.0.0.1:8011/
+  wechat:
+    appid: wxfee550944d738a42
+    appsecret: ff320662e02c1b9ea1e63c55781c29b0
+    redirecturi: http://testwx.zcckj.com
+
+swagger:
+      doc-version: ${swaggerVersion}
+      enabled: true
