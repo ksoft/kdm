@@ -42,7 +42,7 @@ dubbo:
 #    database: 10
 
 server:
-  port: 8011
+  port: 8099
   tomcat:
     access_log_enabled: true
     basedir: target/tomcat
