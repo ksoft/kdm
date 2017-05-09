@@ -1,6 +1,6 @@
-package com.zcckj.storeshow.interceptor;
+package com.ksoft.kdm.interceptor;
 
-import com.zcckj.storeshow.config.AppConfig;
+import com.ksoft.kdm.config.AppConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

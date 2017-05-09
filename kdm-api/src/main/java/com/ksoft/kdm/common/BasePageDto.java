@@ -1,11 +1,10 @@
-package com.zcckj.storeshow.common;
+package com.ksoft.kdm.common;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * @author HZH

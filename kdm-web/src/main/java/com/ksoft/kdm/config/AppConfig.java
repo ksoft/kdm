@@ -1,4 +1,4 @@
-package com.zcckj.storeshow.config;
+package com.ksoft.kdm.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

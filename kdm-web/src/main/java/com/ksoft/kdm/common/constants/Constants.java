@@ -1,4 +1,4 @@
-package com.zcckj.storeshow.common.constants;
+package com.ksoft.kdm.common.constants;
 
 /**
  * 公用常量类

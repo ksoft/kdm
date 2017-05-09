@@ -1,14 +1,14 @@
-package com.zcckj.storeshow.service.impl;
+package com.ksoft.kdm.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageRowBounds;
-import com.zcckj.storeshow.dto.*;
-import com.zcckj.storeshow.entity.UserEntity;
-import com.zcckj.storeshow.enums.UserSexEnum;
-import com.zcckj.storeshow.mapper.UserMapper;
-import com.zcckj.storeshow.service.UserService;
+import com.ksoft.kdm.dto.*;
+import com.ksoft.kdm.entity.UserEntity;
+import com.ksoft.kdm.enums.UserSexEnum;
+import com.ksoft.kdm.mapper.UserMapper;
+import com.ksoft.kdm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 

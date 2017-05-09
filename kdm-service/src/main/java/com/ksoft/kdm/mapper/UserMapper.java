@@ -1,11 +1,8 @@
-package com.zcckj.storeshow.mapper;
+package com.ksoft.kdm.mapper;
 
-import com.zcckj.storeshow.common.BaseMapper;
-import com.zcckj.storeshow.entity.UserEntity;
-import com.zcckj.storeshow.enums.UserSexEnum;
-import org.apache.ibatis.annotations.*;
 
-import java.util.List;
+import com.ksoft.kdm.common.BaseMapper;
+import com.ksoft.kdm.entity.UserEntity;
 
 /**
  * UserMapper
@@ -14,7 +11,7 @@ import java.util.List;
  * @date 2017/3/31
  */
 //@Mapper
-public interface UserMapper extends BaseMapper<UserEntity>{
+public interface UserMapper extends BaseMapper<UserEntity> {
 
     /*@Select("SELECT * FROM users")
     @Results({

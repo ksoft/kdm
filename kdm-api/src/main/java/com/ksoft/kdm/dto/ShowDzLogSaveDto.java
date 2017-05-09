@@ -1,8 +1,8 @@
-package com.zcckj.storeshow.dto;
+package com.ksoft.kdm.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.zcckj.storeshow.common.BaseDto;
-import com.zcckj.storeshow.enums.DzChannelEnum;
+import com.ksoft.kdm.common.BaseDto;
+import com.ksoft.kdm.enums.DzChannelEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 

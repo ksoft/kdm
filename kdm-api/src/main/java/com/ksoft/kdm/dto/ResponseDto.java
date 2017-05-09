@@ -1,6 +1,4 @@
-package com.zcckj.storeshow.dto;
-
-import com.zcckj.storeshow.enums.RespCode;
+package com.ksoft.kdm.dto;
 
 import java.io.Serializable;
 

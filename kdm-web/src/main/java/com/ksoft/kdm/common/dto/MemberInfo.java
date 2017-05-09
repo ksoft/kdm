@@ -1,4 +1,4 @@
-package com.zcckj.storeshow.common.dto;
+package com.ksoft.kdm.common.dto;
 
 import java.io.Serializable;
 

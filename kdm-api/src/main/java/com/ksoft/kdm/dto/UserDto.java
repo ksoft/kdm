@@ -1,8 +1,6 @@
-package com.zcckj.storeshow.dto;
+package com.ksoft.kdm.dto;
 
-import com.zcckj.storeshow.common.BaseDto;
-import com.zcckj.storeshow.common.PageDto;
-import com.zcckj.storeshow.enums.UserSexEnum;
+import com.ksoft.kdm.enums.UserSexEnum;
 
 import java.io.Serializable;
 

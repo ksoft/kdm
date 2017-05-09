@@ -1,11 +1,11 @@
-package com.zcckj.storeshow.controller;
+package com.ksoft.kdm.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.zcckj.storeshow.common.PageDto;
-import com.zcckj.storeshow.dto.*;
-import com.zcckj.storeshow.service.StoreShowService;
-import com.zcckj.storeshow.service.TyreBrandPatternSettingService;
-import com.zcckj.storeshow.service.TyreBrandSettingService;
+import com.ksoft.kdm.common.PageDto;
+import com.ksoft.kdm.dto.*;
+import com.ksoft.kdm.service.StoreShowService;
+import com.ksoft.kdm.service.TyreBrandPatternSettingService;
+import com.ksoft.kdm.service.TyreBrandSettingService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

@@ -1,7 +1,7 @@
-package com.zcckj.storeshow.dto;
+package com.ksoft.kdm.dto;
 
 
-import com.zcckj.storeshow.common.BaseDto;
+import com.ksoft.kdm.common.BaseDto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 

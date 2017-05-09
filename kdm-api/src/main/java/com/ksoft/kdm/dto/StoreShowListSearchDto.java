@@ -1,8 +1,7 @@
-package com.zcckj.storeshow.dto;
+package com.ksoft.kdm.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.zcckj.storeshow.common.BasePageDto;
+import com.ksoft.kdm.common.BasePageDto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 

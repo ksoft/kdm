@@ -1,6 +1,6 @@
-package com.zcckj.storeshow.dto;
+package com.ksoft.kdm.dto;
 
-import com.zcckj.storeshow.common.BasePageDto;
+import com.ksoft.kdm.common.BasePageDto;
 
 /**
  * TyreBrandSettingSearchDto

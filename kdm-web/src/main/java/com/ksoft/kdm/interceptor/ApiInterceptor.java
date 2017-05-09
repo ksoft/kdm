@@ -1,8 +1,8 @@
-package com.zcckj.storeshow.interceptor;
+package com.ksoft.kdm.interceptor;
 
 import com.alibaba.dubbo.common.json.JSON;
-import com.zcckj.storeshow.dto.ResponseDtoFactory;
-import com.zcckj.storeshow.service.MemberService;
+import com.ksoft.kdm.dto.ResponseDtoFactory;
+import com.ksoft.kdm.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
-import java.util.Map;
 
 /**
  * ApiInterceptor

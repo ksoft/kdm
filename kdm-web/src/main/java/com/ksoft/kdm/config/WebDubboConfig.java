@@ -1,4 +1,4 @@
-package com.zcckj.storeshow.config;
+package com.ksoft.kdm.config;
 
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ConsumerConfig;
@@ -79,7 +79,7 @@ public class WebDubboConfig {
     @Bean
     public static AnnotationBean annotationBean() {
         AnnotationBean bean = new AnnotationBean();
-        bean.setPackage("com.zcckj.storeshow");
+        bean.setPackage("com.ksoft.kdm");
         return bean;
     }
 

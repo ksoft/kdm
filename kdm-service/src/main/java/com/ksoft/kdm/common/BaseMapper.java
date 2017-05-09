@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package com.zcckj.storeshow.common;
+package com.ksoft.kdm.common;
 
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;

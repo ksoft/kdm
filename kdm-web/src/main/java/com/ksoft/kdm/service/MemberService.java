@@ -1,7 +1,7 @@
-package com.zcckj.storeshow.service;
+package com.ksoft.kdm.service;
 
-import com.zcckj.storeshow.common.dto.CasualInfo;
-import com.zcckj.storeshow.common.dto.MemberInfo;
+import com.ksoft.kdm.common.dto.CasualInfo;
+import com.ksoft.kdm.common.dto.MemberInfo;
 
 import javax.servlet.http.HttpServletRequest;
 

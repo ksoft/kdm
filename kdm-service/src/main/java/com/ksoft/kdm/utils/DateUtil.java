@@ -1,7 +1,6 @@
-package com.zcckj.storeshow.utils;
+package com.ksoft.kdm.utils;
 
 import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 

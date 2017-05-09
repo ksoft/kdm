@@ -1,11 +1,11 @@
-package com.zcckj.storeshow.service.impl;
+package com.ksoft.kdm.service.impl;
 
 import com.alibaba.dubbo.common.utils.StringUtils;
 import com.alibaba.dubbo.config.annotation.Service;
-import com.zcckj.storeshow.entity.ShowDzLog;
-import com.zcckj.storeshow.enums.DzChannelEnum;
-import com.zcckj.storeshow.mapper.ShowDzLogMapper;
-import com.zcckj.storeshow.service.ShowDzLogService;
+import com.ksoft.kdm.entity.ShowDzLog;
+import com.ksoft.kdm.enums.DzChannelEnum;
+import com.ksoft.kdm.mapper.ShowDzLogMapper;
+import com.ksoft.kdm.service.ShowDzLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;

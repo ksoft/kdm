@@ -1,4 +1,4 @@
-package com.zcckj.storeshow.service;
+package com.ksoft.kdm.service;
 
 /**
  * WechatService

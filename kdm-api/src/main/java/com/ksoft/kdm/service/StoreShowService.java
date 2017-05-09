@@ -1,7 +1,7 @@
-package com.zcckj.storeshow.service;
+package com.ksoft.kdm.service;
 
-import com.zcckj.storeshow.common.PageDto;
-import com.zcckj.storeshow.dto.*;
+import com.ksoft.kdm.common.PageDto;
+import com.ksoft.kdm.dto.*;
 
 import java.util.List;
 import java.util.Map;

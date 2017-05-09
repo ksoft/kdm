@@ -1,8 +1,8 @@
-package com.zcckj.storeshow.service;
+package com.ksoft.kdm.service;
 
-import com.zcckj.storeshow.dto.ResponseDto;
-import com.zcckj.storeshow.dto.UserDto;
-import com.zcckj.storeshow.dto.UserSearchDto;
+import com.ksoft.kdm.dto.ResponseDto;
+import com.ksoft.kdm.dto.UserDto;
+import com.ksoft.kdm.dto.UserSearchDto;
 
 import java.util.List;
 

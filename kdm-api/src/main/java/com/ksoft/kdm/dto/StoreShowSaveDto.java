@@ -1,4 +1,4 @@
-package com.zcckj.storeshow.dto;
+package com.ksoft.kdm.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;

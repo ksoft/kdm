@@ -1,13 +1,13 @@
-package com.zcckj.storeshow.service.impl;
+package com.ksoft.kdm.service.impl;
 
 import com.alibaba.dubbo.common.utils.StringUtils;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.PageRowBounds;
-import com.zcckj.storeshow.common.PageDto;
-import com.zcckj.storeshow.dto.*;
-import com.zcckj.storeshow.entity.TyreBrandSetting;
-import com.zcckj.storeshow.mapper.TyreBrandSettingMapper;
-import com.zcckj.storeshow.service.TyreBrandSettingService;
+import com.ksoft.kdm.common.PageDto;
+import com.ksoft.kdm.dto.*;
+import com.ksoft.kdm.entity.TyreBrandSetting;
+import com.ksoft.kdm.mapper.TyreBrandSettingMapper;
+import com.ksoft.kdm.service.TyreBrandSettingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;

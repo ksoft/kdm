@@ -1,4 +1,4 @@
-package com.zcckj.storeshow.enums;
+package com.ksoft.kdm.enums;
 
 public enum CusFlagEnum {
 

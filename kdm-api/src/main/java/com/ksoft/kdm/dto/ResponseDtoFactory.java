@@ -1,6 +1,6 @@
-package com.zcckj.storeshow.dto;
+package com.ksoft.kdm.dto;
 
-import com.zcckj.storeshow.enums.RespCode;
+import com.ksoft.kdm.enums.RespCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

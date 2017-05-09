@@ -22,10 +22,11 @@
  * THE SOFTWARE.
  */
 
-package com.zcckj.storeshow.config;
+package com.ksoft.kdm.config;
 
-import com.zcckj.storeshow.interceptor.ApiInterceptor;
-import com.zcckj.storeshow.interceptor.BaseInterceptor;
+
+import com.ksoft.kdm.interceptor.ApiInterceptor;
+import com.ksoft.kdm.interceptor.BaseInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

@@ -1,22 +1,22 @@
-package com.zcckj.storeshow.service.impl;
+package com.ksoft.kdm.service.impl;
 
 import com.alibaba.dubbo.common.utils.CollectionUtils;
 import com.alibaba.dubbo.common.utils.StringUtils;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.PageRowBounds;
-import com.zcckj.storeshow.common.PageDto;
-import com.zcckj.storeshow.dto.*;
-import com.zcckj.storeshow.entity.ShowDzLog;
-import com.zcckj.storeshow.entity.ShowPhoto;
-import com.zcckj.storeshow.entity.StoreShow;
-import com.zcckj.storeshow.enums.DzChannelEnum;
-import com.zcckj.storeshow.enums.JxStatusEnum;
-import com.zcckj.storeshow.enums.StatusEnum;
-import com.zcckj.storeshow.mapper.ShowDzLogMapper;
-import com.zcckj.storeshow.mapper.ShowPhotoMapper;
-import com.zcckj.storeshow.mapper.StoreShowMapper;
-import com.zcckj.storeshow.service.StoreShowService;
-import com.zcckj.storeshow.utils.DateUtil;
+import com.ksoft.kdm.common.PageDto;
+import com.ksoft.kdm.dto.*;
+import com.ksoft.kdm.entity.ShowDzLog;
+import com.ksoft.kdm.entity.ShowPhoto;
+import com.ksoft.kdm.entity.StoreShow;
+import com.ksoft.kdm.enums.DzChannelEnum;
+import com.ksoft.kdm.enums.JxStatusEnum;
+import com.ksoft.kdm.enums.StatusEnum;
+import com.ksoft.kdm.mapper.ShowDzLogMapper;
+import com.ksoft.kdm.mapper.ShowPhotoMapper;
+import com.ksoft.kdm.mapper.StoreShowMapper;
+import com.ksoft.kdm.service.StoreShowService;
+import com.ksoft.kdm.utils.DateUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -157,7 +157,7 @@ public class StoreShowServiceImpl implements StoreShowService {
         }
         //开始时间
         if(null != searchDto.getBeginDate()){
-            c.andGreaterThanOrEqualTo("modifyTm",DateUtil.getDayBegin(searchDto.getBeginDate()));
+            c.andGreaterThanOrEqualTo("modifyTm", DateUtil.getDayBegin(searchDto.getBeginDate()));
         }
         //结束时间
         if(null != searchDto.getEndDate()){

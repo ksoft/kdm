@@ -1,4 +1,4 @@
-package com.zcckj.storeshow.config;
+package com.ksoft.kdm.config;
 
 import com.alibaba.dubbo.config.*;
 import com.alibaba.dubbo.config.spring.AnnotationBean;
@@ -90,7 +90,7 @@ public class ServiceDubboConfig {
     @Bean
     public static AnnotationBean annotationBean() {
         AnnotationBean bean = new AnnotationBean();
-        bean.setPackage("com.zcckj.storeshow.service");
+        bean.setPackage("com.ksoft.kdm.service");
         return bean;
     }
 

@@ -1,7 +1,7 @@
-package com.zcckj.storeshow.entity;
+package com.ksoft.kdm.entity;
 
-import com.zcckj.storeshow.common.BaseEntity;
-import com.zcckj.storeshow.enums.UserSexEnum;
+import com.ksoft.kdm.common.BaseEntity;
+import com.ksoft.kdm.enums.UserSexEnum;
 
 import javax.persistence.Column;
 import javax.persistence.Table;

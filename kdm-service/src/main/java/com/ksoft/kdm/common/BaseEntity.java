@@ -1,4 +1,4 @@
-package com.zcckj.storeshow.common;
+package com.ksoft.kdm.common;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

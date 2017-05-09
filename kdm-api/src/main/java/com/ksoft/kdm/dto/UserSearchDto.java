@@ -1,7 +1,7 @@
-package com.zcckj.storeshow.dto;
+package com.ksoft.kdm.dto;
 
-import com.zcckj.storeshow.common.PageDto;
-import com.zcckj.storeshow.enums.UserSexEnum;
+import com.ksoft.kdm.common.PageDto;
+import com.ksoft.kdm.enums.UserSexEnum;
 
 
 public class UserSearchDto extends PageDto<UserDto> {

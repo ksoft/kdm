@@ -1,4 +1,4 @@
-package com.zcckj.storeshow.common.util;
+package com.ksoft.kdm.common.util;
 
 import com.alibaba.dubbo.common.utils.StringUtils;
 import org.apache.commons.beanutils.ConvertUtils;

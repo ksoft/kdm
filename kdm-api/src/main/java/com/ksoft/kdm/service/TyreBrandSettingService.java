@@ -1,10 +1,10 @@
-package com.zcckj.storeshow.service;
+package com.ksoft.kdm.service;
 
-import com.zcckj.storeshow.common.PageDto;
-import com.zcckj.storeshow.dto.ResponseDto;
-import com.zcckj.storeshow.dto.TyreBrandSettingDto;
-import com.zcckj.storeshow.dto.TyreBrandSettingListDto;
-import com.zcckj.storeshow.dto.TyreBrandSettingSearchDto;
+import com.ksoft.kdm.common.PageDto;
+import com.ksoft.kdm.dto.ResponseDto;
+import com.ksoft.kdm.dto.TyreBrandSettingDto;
+import com.ksoft.kdm.dto.TyreBrandSettingListDto;
+import com.ksoft.kdm.dto.TyreBrandSettingSearchDto;
 
 
 /**

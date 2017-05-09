@@ -1,8 +1,8 @@
-package com.zcckj.storeshow.mapper;
+package com.ksoft.kdm.mapper;
 
-import com.zcckj.storeshow.common.BaseMapper;
-import com.zcckj.storeshow.dto.ShowDzLogDto;
-import com.zcckj.storeshow.entity.ShowDzLog;
+import com.ksoft.kdm.common.BaseMapper;
+import com.ksoft.kdm.dto.ShowDzLogDto;
+import com.ksoft.kdm.entity.ShowDzLog;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

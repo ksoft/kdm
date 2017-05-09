@@ -1,4 +1,4 @@
-package com.zcckj.storeshow.utils;
+package com.ksoft.kdm.utils;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;

@@ -1,8 +1,8 @@
-package com.zcckj.storeshow.entity;
+package com.ksoft.kdm.entity;
 
-import com.zcckj.storeshow.common.BaseEntity;
-import com.zcckj.storeshow.enums.DzChannelEnum;
-import com.zcckj.storeshow.enums.ReadFlagEnum;
+import com.ksoft.kdm.common.BaseEntity;
+import com.ksoft.kdm.enums.DzChannelEnum;
+import com.ksoft.kdm.enums.ReadFlagEnum;
 
 import javax.persistence.Table;
 import java.sql.Timestamp;

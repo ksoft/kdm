@@ -1,9 +1,9 @@
-package com.zcckj.storeshow.dto;
+package com.ksoft.kdm.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.zcckj.storeshow.enums.JxStatusEnum;
-import com.zcckj.storeshow.enums.StatusEnum;
+import com.ksoft.kdm.enums.JxStatusEnum;
+import com.ksoft.kdm.enums.StatusEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.sql.Date;

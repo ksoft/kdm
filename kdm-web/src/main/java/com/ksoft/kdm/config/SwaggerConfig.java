@@ -1,4 +1,4 @@
-package com.zcckj.storeshow.config;
+package com.ksoft.kdm.config;
 
 import io.swagger.annotations.Api;
 import org.springframework.boot.context.properties.ConfigurationProperties;

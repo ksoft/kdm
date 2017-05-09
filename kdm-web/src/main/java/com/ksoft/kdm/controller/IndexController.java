@@ -1,18 +1,18 @@
-package com.zcckj.storeshow.controller;
+package com.ksoft.kdm.controller;
 
 import com.alibaba.dubbo.common.utils.StringUtils;
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.zcckj.storeshow.common.PageDto;
-import com.zcckj.storeshow.common.constants.Constants;
-import com.zcckj.storeshow.common.dto.CasualInfo;
-import com.zcckj.storeshow.dto.ResponseDto;
-import com.zcckj.storeshow.dto.ShowDzLogSaveDto;
-import com.zcckj.storeshow.dto.StoreShowListDto;
-import com.zcckj.storeshow.dto.StoreShowListSearchDto;
-import com.zcckj.storeshow.service.MemberService;
-import com.zcckj.storeshow.service.ShowService;
-import com.zcckj.storeshow.service.StoreShowService;
-import com.zcckj.storeshow.service.WechatService;
+import com.ksoft.kdm.common.PageDto;
+import com.ksoft.kdm.common.constants.Constants;
+import com.ksoft.kdm.common.dto.CasualInfo;
+import com.ksoft.kdm.dto.ResponseDto;
+import com.ksoft.kdm.dto.ShowDzLogSaveDto;
+import com.ksoft.kdm.dto.StoreShowListDto;
+import com.ksoft.kdm.dto.StoreShowListSearchDto;
+import com.ksoft.kdm.service.MemberService;
+import com.ksoft.kdm.service.ShowService;
+import com.ksoft.kdm.service.StoreShowService;
+import com.ksoft.kdm.service.WechatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -25,7 +25,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 

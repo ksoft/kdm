@@ -1,6 +1,6 @@
-package com.zcckj.storeshow.common.dto;
+package com.ksoft.kdm.common.dto;
 
-import com.zcckj.storeshow.enums.DzChannelEnum;
+import com.ksoft.kdm.enums.DzChannelEnum;
 
 /**
  * CasualInfo

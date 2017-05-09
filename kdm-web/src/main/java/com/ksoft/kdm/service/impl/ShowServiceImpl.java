@@ -1,10 +1,10 @@
-package com.zcckj.storeshow.service.impl;
+package com.ksoft.kdm.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.zcckj.storeshow.dto.StoreShowListDto;
-import com.zcckj.storeshow.enums.DzChannelEnum;
-import com.zcckj.storeshow.service.ShowDzLogService;
-import com.zcckj.storeshow.service.ShowService;
+import com.ksoft.kdm.dto.StoreShowListDto;
+import com.ksoft.kdm.enums.DzChannelEnum;
+import com.ksoft.kdm.service.ShowDzLogService;
+import com.ksoft.kdm.service.ShowService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

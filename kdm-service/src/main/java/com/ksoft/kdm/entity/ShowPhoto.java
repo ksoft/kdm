@@ -1,6 +1,6 @@
-package com.zcckj.storeshow.entity;
+package com.ksoft.kdm.entity;
 
-import com.zcckj.storeshow.common.BaseEntity;
+import com.ksoft.kdm.common.BaseEntity;
 
 import javax.persistence.Table;
 

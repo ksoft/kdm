@@ -1,7 +1,7 @@
-package com.zcckj.storeshow.service;
+package com.ksoft.kdm.service;
 
-import com.zcckj.storeshow.dto.StoreShowListDto;
-import com.zcckj.storeshow.enums.DzChannelEnum;
+import com.ksoft.kdm.dto.StoreShowListDto;
+import com.ksoft.kdm.enums.DzChannelEnum;
 
 import java.util.List;
 

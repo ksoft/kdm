@@ -1,12 +1,12 @@
-package com.zcckj.storeshow.service.impl;
+package com.ksoft.kdm.service.impl;
 
 import com.alibaba.dubbo.common.utils.StringUtils;
-import com.zcckj.storeshow.common.constants.Constants;
-import com.zcckj.storeshow.common.dto.CasualInfo;
-import com.zcckj.storeshow.common.dto.MemberInfo;
-import com.zcckj.storeshow.common.util.HttpKit;
-import com.zcckj.storeshow.enums.DzChannelEnum;
-import com.zcckj.storeshow.service.MemberService;
+import com.ksoft.kdm.common.constants.Constants;
+import com.ksoft.kdm.common.dto.CasualInfo;
+import com.ksoft.kdm.common.dto.MemberInfo;
+import com.ksoft.kdm.common.util.HttpKit;
+import com.ksoft.kdm.enums.DzChannelEnum;
+import com.ksoft.kdm.service.MemberService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;

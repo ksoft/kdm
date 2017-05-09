@@ -1,8 +1,6 @@
-package com.zcckj.storeshow.dto;
+package com.ksoft.kdm.dto;
 
-import com.zcckj.storeshow.common.BaseDto;
-
-import java.util.Date;
+import com.ksoft.kdm.common.BaseDto;
 
 /**
  * TyreBrandSettingDto

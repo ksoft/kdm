@@ -1,7 +1,7 @@
-package com.zcckj.storeshow.mapper;
+package com.ksoft.kdm.mapper;
 
-import com.zcckj.storeshow.common.BaseMapper;
-import com.zcckj.storeshow.entity.ShowPhoto;
+import com.ksoft.kdm.common.BaseMapper;
+import com.ksoft.kdm.entity.ShowPhoto;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

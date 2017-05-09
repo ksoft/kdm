@@ -1,9 +1,9 @@
-package com.zcckj.storeshow.service.impl;
+package com.ksoft.kdm.service.impl;
 
 import com.alibaba.dubbo.common.utils.StringUtils;
 import com.alibaba.fastjson.JSONObject;
-import com.zcckj.storeshow.common.util.HttpKit;
-import com.zcckj.storeshow.service.WechatService;
+import com.ksoft.kdm.common.util.HttpKit;
+import com.ksoft.kdm.service.WechatService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 

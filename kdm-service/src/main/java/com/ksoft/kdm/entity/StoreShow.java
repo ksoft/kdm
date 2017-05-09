@@ -1,8 +1,8 @@
-package com.zcckj.storeshow.entity;
+package com.ksoft.kdm.entity;
 
-import com.zcckj.storeshow.common.BaseEntity;
-import com.zcckj.storeshow.enums.JxStatusEnum;
-import com.zcckj.storeshow.enums.StatusEnum;
+import com.ksoft.kdm.common.BaseEntity;
+import com.ksoft.kdm.enums.JxStatusEnum;
+import com.ksoft.kdm.enums.StatusEnum;
 
 import javax.persistence.Table;
 import java.sql.Timestamp;

@@ -1,13 +1,13 @@
-package com.zcckj.storeshow.controller;
+package com.ksoft.kdm.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.zcckj.storeshow.common.PageDto;
-import com.zcckj.storeshow.common.dto.MemberInfo;
-import com.zcckj.storeshow.dto.*;
-import com.zcckj.storeshow.enums.DzChannelEnum;
-import com.zcckj.storeshow.service.MemberService;
-import com.zcckj.storeshow.service.ShowService;
-import com.zcckj.storeshow.service.StoreShowService;
+import com.ksoft.kdm.common.PageDto;
+import com.ksoft.kdm.common.dto.MemberInfo;
+import com.ksoft.kdm.dto.*;
+import com.ksoft.kdm.enums.DzChannelEnum;
+import com.ksoft.kdm.service.MemberService;
+import com.ksoft.kdm.service.ShowService;
+import com.ksoft.kdm.service.StoreShowService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;

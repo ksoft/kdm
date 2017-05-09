@@ -1,10 +1,8 @@
-package com.zcckj.storeshow.dto;
+package com.ksoft.kdm.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.zcckj.storeshow.common.BaseDto;
-import com.zcckj.storeshow.enums.JxStatusEnum;
-import com.zcckj.storeshow.enums.StatusEnum;
+import com.ksoft.kdm.common.BaseDto;
 
 import java.util.ArrayList;
 import java.util.Date;
