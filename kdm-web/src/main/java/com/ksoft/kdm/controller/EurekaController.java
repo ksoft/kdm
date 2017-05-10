@@ -20,6 +20,6 @@ public class EurekaController {
 
     @GetMapping("/getHello/{name}")
     public String getUserById(@PathVariable String name){
-        return this.restTemplate.getForObject(this.url+name, String.class);
+        return restTemplate.getForObject(this.url+name,String.class);
     }
 }

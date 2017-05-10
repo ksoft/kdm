@@ -3,11 +3,13 @@ package com.ksoft.kdm.service.impl;
 import com.ksoft.kdm.service.EurekaService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author zhangjianbo
  * @date 2017/5/10
  */
+@RestController
 public class EurekaServiceImpl implements EurekaService{
 
     @GetMapping("/hello/{name}")

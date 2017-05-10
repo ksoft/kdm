@@ -1,8 +1,12 @@
 package com.ksoft.kdm.config;
 
+import com.ksoft.kdm.interceptor.XUserAgentInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.Collections;
 
 /**
  * @author zhangjianbo
@@ -11,9 +15,9 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class EurekaConfig {
     @Bean
-    //初始化生成bean实例，controller中使用，restTemplate和controller变量名一致
-    //类同：private RestTemplate restTemplate =new RestTemplate();
-    public RestTemplate restTemplate(){
-        return new RestTemplate();
+    public RestTemplate restTemplate() {
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.setInterceptors(Collections.<ClientHttpRequestInterceptor>singletonList(new XUserAgentInterceptor()));
+        return restTemplate;
     }
 }
