@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.authentication.dao.ReflectionSaltSource;
+import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -18,6 +18,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 
 @Configuration
 @EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)//开启security注解
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -28,7 +29,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
      *
      * @return
      */
-    @Bean
+   /* @Bean
     public AuthenticationProvider daoAuthenticationProvider() {
         ReflectionSaltSource s = new ReflectionSaltSource();
         s.setUserPropertyToUse("username");
@@ -38,7 +39,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         provider.setSaltSource(s);
         return provider;
     }
-
+*/
 
     @Override
     public void configure(WebSecurity web) throws Exception {
@@ -53,14 +54,36 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     }
 
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        auth
+                .userDetailsService(userDetailsService)
+                .passwordEncoder(passwordEncoder());
+
+    }
+
+    /**
+     * 设置用户密码的加密方式为MD5加密
+     * @return
+     */
+    @Bean
+    public Md5PasswordEncoder passwordEncoder() {
+        return new Md5PasswordEncoder();
+    }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-                .antMatchers("/login", "/auth/login").permitAll()
+                .antMatchers("/login","/auth/login","/css/**","/image/*").permitAll()
+                .anyRequest().authenticated()
                 .and().csrf().disable()
-                .formLogin().successForwardUrl("/index").loginProcessingUrl("/auth/login").usernameParameter("username").passwordParameter("password")
+                .formLogin()
+                //.loginPage("/test")
+                .loginProcessingUrl("/auth/login")
                 .failureHandler(authenticationFailureHandler()).successHandler(authenticationSuccessHandler())
+                .permitAll()
+                .and().logout().permitAll()
                 .and().exceptionHandling().accessDeniedPage("/Access_Denied");
     }
 

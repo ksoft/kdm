@@ -32,6 +32,7 @@ public class UserLoginFailHandler extends SimpleUrlAuthenticationFailureHandler 
             out.close();
         } else {
             super.onAuthenticationFailure(request, response, exception);
+            //getRedirectStrategy().sendRedirect(request,response,"/login");
         }
     }
 }

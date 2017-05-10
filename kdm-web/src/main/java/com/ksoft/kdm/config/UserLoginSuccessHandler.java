@@ -28,7 +28,7 @@ public class UserLoginSuccessHandler extends SavedRequestAwareAuthenticationSucc
             out.flush();
             out.close();
         } else {
-            super.onAuthenticationSuccess(request, response, authentication);
+            getRedirectStrategy().sendRedirect(request,response,"/index");
         }
     }
 

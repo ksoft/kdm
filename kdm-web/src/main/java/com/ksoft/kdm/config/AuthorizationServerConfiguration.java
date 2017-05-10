@@ -59,7 +59,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
                 .withClient(propertyResolver.getProperty(PROP_CLIENTID))
                 .scopes("read", "write")
                 .authorities(Authorities.ROLE_ADMIN.name(), Authorities.ROLE_USER.name())
-                .authorizedGrantTypes("password", "refresh_token")
+                .authorizedGrantTypes("password", "refresh_token","authorization_code")
                 .secret(propertyResolver.getProperty(PROP_SECRET))
                 .accessTokenValiditySeconds(propertyResolver.getProperty(PROP_TOKEN_VALIDITY_SECONDS, Integer.class, 1800));
     }
