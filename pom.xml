@@ -119,6 +119,11 @@
             <artifactId>springfox-swagger2</artifactId>
             <version>2.6.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-ftp</artifactId>
+            <version>4.3.7.RELEASE</version>
+        </dependency>
 
         <!--spring-boot-configuration:spring boot 配置处理器; -->
         <dependency>
