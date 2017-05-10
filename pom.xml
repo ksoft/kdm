@@ -12,12 +12,13 @@
         <module>kdm-api</module>
         <module>kdm-service</module>
         <module>kdm-web</module>
+        <module>kdm-eureka</module>
     </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.2.RELEASE</version>
+        <version>1.4.3.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -32,6 +33,20 @@
         <thymeleaf.version>3.0.3.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.2.1</thymeleaf-layout-dialect.version>
     </properties>
+
+    <!--spring cloud-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Camden.SR4</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <repositories>
         <!--私服配置-->
         <repository>
@@ -78,7 +93,7 @@
             <version>1.0.2</version>
         </dependency>
 
-        <!-- 热启动，热部署依赖包 -->
+        <!-- 热启动，热部署依赖包
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -86,7 +101,7 @@
             <version>1.5.1.RELEASE</version>
             <optional>true</optional>
         </dependency>
-
+-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
