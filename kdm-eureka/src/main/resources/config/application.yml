@@ -2,7 +2,7 @@ server:
   port: 8761
 security:
   basic:
-    enabled: true #开启认证
+    enabled: false #开启认证
   user:
     name: user
     password: 123456

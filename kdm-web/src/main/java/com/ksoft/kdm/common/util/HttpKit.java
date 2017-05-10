@@ -101,9 +101,9 @@ public class HttpKit {
 
 
 
-	public static void main(String[] args) throws Exception {
+	//public static void main(String[] args) throws Exception {
 
-		System.out.println(get("http://1.jiajiag.com/lottery/buy_history.cgi?time=1430363119327&pid=1981&_=1430363119327", new HashMap<String, Object>()));
+		//System.out.println(get("http://1.jiajiag.com/lottery/buy_history.cgi?time=1430363119327&pid=1981&_=1430363119327", new HashMap<String, Object>()));
 
 		// String accessToken = WeChat.getAccessToken();
 		// String openId = "osTF-t31M8c2WbOrcm0F4dEisUso";
@@ -122,7 +122,7 @@ public class HttpKit {
 		// Map<String, Object> mgs = WeChat.uploadMedia(accessToken, "image",
 		// new File("C:\\Users\\郭华\\Pictures\\13.jpg"));
 		// System.out.println(JSON.toJSONString(mgs));
-	}
+	//}
 
 	/**
 	 * 获取请求的IP地址

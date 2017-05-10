@@ -32,12 +32,12 @@ public class UserLoginPasswordEncoder extends Md5PasswordEncoder {
         return super.isPasswordValid(encPass, rawPass, salt);
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         UserLoginPasswordEncoder encoder = new UserLoginPasswordEncoder();
         String rw = "e10adc3949ba59abbe56e057f20f883e";
         String en = "3ea6118128fcd04683b77dac590e4a55";
         String salt = "123123123";
         System.out.println(encoder.isPasswordValid(en, rw, salt));
         System.out.println(encoder.encodePassword(rw, salt));
-    }
+    }*/
 }
