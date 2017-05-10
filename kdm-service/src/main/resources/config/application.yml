@@ -3,8 +3,15 @@ spring:
     active: dev
   session:
     store-type: none
+  application:
+      name: kdm-provider
 logging:
   config: classpath:config/logback-spring.xml
+server:
+  port: 8081
+  tomcat:
+    access_log_enabled: true
+    basedir: target/tomcat
 ---
 #development profile
 spring:
@@ -23,6 +30,16 @@ dubbo:
   service-group: kdm
   zookeeper-address: zookeeper://127.0.0.1:2181 #zookeeper://171.188.0.161:2181
   time-out: 100000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123456@localhost:8761/eureka  #注册 中心已经开启认证
+  instance:
+    prefer-ip-address: true
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
 
 mybatis:
   #config-location: config/mybatis-config.xml

@@ -3,9 +3,19 @@ spring:
     active: dev
   session:
     store-type: none
+  application:
+      name: kdm-consumer
 swaggerVersion: 1.0
 logging:
   config: classpath:config/logback-spring.xml
+server:
+  port: 8082
+  tomcat:
+    access_log_enabled: true
+    basedir: target/tomcat
+user:
+  userServerPath: http://localhost:8081/hello/
+
 #Jackson配置
 spring.jackson:
   #default-property-inclusion: non_default
@@ -43,16 +53,20 @@ dubbo:
   service-group: kdm
   zookeeper-address: zookeeper://127.0.0.1:2181 #zookeeper://171.188.0.161:2181 #zookeeper://10.1.80.213:2181
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123456@localhost:8761/eureka  #注册 中心已经开启认证
+  instance:
+    prefer-ip-address: true
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+
 #redis:
 #    host: 171.188.0.166
 #    port: 6379
 #    database: 10
-
-server:
-  port: 8099
-  tomcat:
-    access_log_enabled: true
-    basedir: target/tomcat
 
 zcckj:
   static-path: http://127.0.0.1:8011/
