@@ -32,7 +32,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     private static final String AUTHENTICATE_ENDPOINT = "/auth/login";
     private static final String REMEMBER_ME_KEY ="rescue-remember-me";
     private static final String cookieName="KDM-COOKIE";
-    private static final String cookieDomain="/";
+    private static final String cookieDomain="localhost";
 
     @Autowired
     private UserDetailsService userDetailsService;
