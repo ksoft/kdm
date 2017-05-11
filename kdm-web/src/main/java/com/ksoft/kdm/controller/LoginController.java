@@ -28,6 +28,12 @@ public class LoginController {
         return "login/login";
     }
 
+    @GetMapping(value = "index")
+    public String index() {
+
+        return "index";
+    }
+
     /**
      * 生成验证码
      *

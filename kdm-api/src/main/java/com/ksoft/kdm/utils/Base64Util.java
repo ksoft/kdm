@@ -42,6 +42,6 @@ public class Base64Util {
     }
 
     public static void main(String[] args) {
-        System.out.println(Base64Util.getBase64("rajithapp:secret"));
+        System.out.println(Base64Util.getBase64("kdmapp:secret"));
     }
 }

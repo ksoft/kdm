@@ -120,7 +120,7 @@
             data:data,
             success:function (result) {
                 if(result.success){
-                    window.location.href="/";
+                    window.location.href="/index";
                 }else {
                     $("div.err-msg").text(result.message);
                     refreshCode();

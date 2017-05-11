@@ -56,7 +56,7 @@ dubbo:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://user:123456@localhost:8761/eureka  #注册 中心已经开启认证
+      defaultZone: http://eurekauser:123456@localhost:8761/eureka  #注册 中心已经开启认证
   instance:
     prefer-ip-address: true
     instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
@@ -82,7 +82,7 @@ swagger:
 #Application specific
 authentication:
   oauth:
-    clientid: rajithapp
+    clientid: kdmapp
     secret: secret
     tokenValidityInSeconds: 1800
 
@@ -116,3 +116,10 @@ oauth:
   server:
     staticUrlPath:
     ftpFileBase:
+
+
+kdm:
+  oauth:
+    client-id: kdmapp
+    secret: secret
+    tokenValidityInSeconds: 1800
