@@ -58,7 +58,7 @@ public class KaptchaConfig {
         properties.setProperty("kaptcha.textproducer.font.color", "blue");
         properties.setProperty("kaptcha.image.width", "150");
         properties.setProperty("kaptcha.image.height", "45");
-        properties.setProperty("kaptcha.session.key", "rescue.valid.code");
+        properties.setProperty("kaptcha.session.key", "kdm.valid.code");
         properties.setProperty("kaptcha.textproducer.char.length", "4");
         properties.setProperty("kaptcha.textproducer.font.names", "宋体,楷体,微软雅黑");
         properties.setProperty("kaptcha.background.clear.from","255,255,255");

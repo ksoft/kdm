@@ -33,9 +33,9 @@ dubbo:
 
 security:
   basic:
-    enabled: true #开启认证
+    enabled: true #开启认证，客户端调用服务时，需要在http header里加  Authorization属性，值为:Basic Base64(user.name+:+user.passwrod)
   user:
-    name: user
+    name: serviceuser
     password: 123456
 
 eureka:
@@ -63,4 +63,3 @@ pagehelper:
   reasonable: false
   #当该参数设置为true时，使用 RowBounds 分页会进行 count 查询
   rowBoundsWithCount: true
-

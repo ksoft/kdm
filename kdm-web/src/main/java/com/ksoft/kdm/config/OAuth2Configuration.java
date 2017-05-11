@@ -24,10 +24,10 @@ public class OAuth2Configuration {
         @Override
         public void configure(HttpSecurity http) throws Exception {
             http
-                    .requestMatchers().antMatchers("/articles")
+                    .requestMatchers().antMatchers("/admin")
                     .and()
                     .authorizeRequests()
-                    .antMatchers("/articles").access("#oauth2.hasScope('read')");
+                    .antMatchers("/admin").access("#oauth2.hasScope('read')");
         }
     }
 }

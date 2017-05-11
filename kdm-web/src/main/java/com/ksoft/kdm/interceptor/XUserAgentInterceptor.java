@@ -20,7 +20,7 @@ public class XUserAgentInterceptor implements ClientHttpRequestInterceptor {
             HttpRequest request, byte[] body, ClientHttpRequestExecution execution)
             throws IOException {
         HttpRequestWrapper requestWrapper = new HttpRequestWrapper(request);
-        requestWrapper.getHeaders().add("Authorization","Basic "+ Base64Util.getBase64("user:123456"));
+        requestWrapper.getHeaders().add("Authorization","Basic "+ Base64Util.getBase64("serviceuser:123456"));
         return execution.execute(request, body);
     }
 }
