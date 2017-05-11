@@ -23,7 +23,7 @@ spring.jackson:
 #mvc
 mvc:
   view:
-    suffix: .ftl
+    suffix: .html
 ---
 #development profile
 spring:
@@ -111,3 +111,8 @@ kaptcha:
     clear:
       from: 247,247,247
       to: 247,247,247
+
+oauth:
+  server:
+    staticUrlPath:
+    ftpFileBase:

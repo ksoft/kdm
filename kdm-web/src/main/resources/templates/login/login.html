@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8"/>
     <title>KDM--登陆</title>
-    <link th:href="${staticPath}+'/css/login.css'" rel="stylesheet" type="text/css" href="../static/css/login.css"/>
+    <link th:href="${staticPath}+'/css/login.css'" rel="stylesheet" type="text/css" href="../../static/css/login.css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link th:href="${staticPath}+'css/bootstrap.min.css?v=3.3.6'" rel="stylesheet"/>
+    <link th:href="${staticPath}+'/css/font-awesome.css?v=4.4.0'" rel="stylesheet"/>
+    <link th:href="${staticPath}+'css/animate.css'" rel="stylesheet"/>
+    <link th:href="${staticPath}+'css/style.css?v=4.1.0'" rel="stylesheet"/>
 </head>
-<body>
-<div class="bg">
-    <h1 class="logo"><a href=""><img th:src="${staticPath}+'/img/logo.png'" src="../static/img/logo.png"/></a></h1>
-    <div class="login">
-        <div class="loginBox">
-            <div class="loginDiv">
-                <b class="loginDivB"><img th:src="${staticPath}+'/img/user.png'" src="../static/img/user.png"/></b>
-                <input type="text" name="username" class="loginDivInp" placeholder="请输入账号" id="user"/>
-            </div>
+<body class="gray-bg">
 
-            <div class="loginDiv">
-                <b class="loginDivB"><img th:src="${staticPath}+'/img/psd.png'" src="../static/img/psd.png"/></b>
-                <input type="password" name="password" class="loginDivInp loginDivInp_1" placeholder="请输入登录密码" id="psd"/>
-                <img th:src="${staticPath}+'/img/showpsd.png'" src="../static/img/showpsd.png" class="showpsd"/>
-            </div>
+<div class="middle-box text-center loginscreen  animated fadeInDown">
+    <div>
+        <div>
 
+            <h1 class="logo-name">H+</h1>
+
+        </div>
+        <h3>欢迎使用 H+</h3>
+
+        <form id="loginForm" class="m-t" role="form" action="">
+            <div class="form-group">
+                <input type="text" id="username" class="form-control" placeholder="用户名"/>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" class="form-control" placeholder="密码" required=""/>
+            </div>
             <div class="loginDivX">
                 <div class="loginDivX_1">
                     <b class="loginDivB"><img th:src="${staticPath}+'/img/yzm.png'" src="../static/img/yzm.png"/></b>
@@ -28,24 +35,32 @@
                 </div>
                 <div  class="loginDivX_2"><img class="verify-code" th:src="@{/img/code}" src="" alt="验证码" title="点击更换验证码"/></div>
             </div>
-
-            <div th:text="${message}" class="prompt err-msg">帐号或密码输入错误</div>
-
             <div class="next">
                 <b class="next_1" id="rem-me"></b>
                 <span class="next_2">下次自动登录</span>
                 <span  class="next_3 verify-code">点击可更换验证码</span>
             </div>
 
-            <a class="sign">登录</a>
-        </div>
+            <div th:text="${message}" class="prompt err-msg">帐号或密码输入错误</div>
+            <button type="button" id="login" class="btn btn-primary block full-width m-b">登 录</button>
+
+
+            <p class="text-muted text-center"> <a href="login.html#"><small>忘记密码了？</small></a> | <a href="register.html">注册一个新账号</a>
+            </p>
+
+        </form>
     </div>
-    <p class="copy">©2016 Chekongjian Inc. All Rights Reserved.</p>
+
 </div>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+<!--统计代码，可删除-->
+
 </body>
-<script type="text/javascript" th:src="${staticPath}+'/js/libs/jquery.min.js'" src="../static/js/libs/jquery.min.js"></script>
-<script type="text/javascript" th:src="${staticPath}+'/js/libs/jquery.md5.js'" src="../static/js/libs/jquery.min.js"></script>
-<script type="text/javascript" th:src="${staticPath}+'/js/libs/jquery.cookie.js'" src="../static/js/libs/jquery.min.js"></script>
+<!-- 全局js -->
+<script type="text/javascript" th:src="${staticPath}+'/js/libs/jquery.min.js?v=2.1.4'" src="../../static/js/libs/jquery.min.js"></script>
+<script type="text/javascript" th:src="${staticPath}+'/js/bootstrap.min.js?v=3.3.6'"></script>
+<script type="text/javascript" th:src="${staticPath}+'/js/libs/jquery.md5.js'" src="../../static/js/libs/jquery.min.js"></script>
+<script type="text/javascript" th:src="${staticPath}+'/js/libs/jquery.cookie.js'" src="../../static/js/libs/jquery.min.js"></script>
 <script type="text/javascript">
     $(function(){
 
@@ -54,19 +69,6 @@
                 login();
             }
         });
-        $('.next b').click(function(){
-            $(this).toggleClass('next_1')
-        });
-        $('.copy').css('margin-top','my_height');
-        $('.showpsd').click(function(){
-            if($('#psd').attr('type')=='password')
-            {
-                $('#psd').attr('type','text')
-            }
-            else{
-                $('#psd').attr('type','password')
-            }
-        })
 
         $('#yzm').focus(function(){
             var text_val=$(this).val();
@@ -82,7 +84,7 @@
                 $(this).val('请输入验证码');
             }
         });
-        $("a.sign").click(function () {
+        $("#login").click(function () {
             login();
         });
         $(".verify-code").click(function(){
@@ -94,21 +96,21 @@
         if($("b#rem-me").hasClass("next_1")){
             rem = "on";
         }
-        if($("input[name='username']").val().trim()==''){
+        if($.trim($("#username").val())==''){
             alert("请输入用户名");
             return;
         }
-        if($("input[name='password']").val().trim()==''){
+        if($.trim($("#password").val())==''){
             alert("请输入密码");
             return;
         }
-        if($("input#valid-code").val().trim()==''){
+        if($.trim($("input#valid-code").val())==''){
             alert("验证码为空");
             return;
         }
         var data={
-            username:$("input[name='username']").val(),
-            password:$("input[name='password']").val(),
+            username:$("#username").val(),
+            password:$("#password").val(),
             remember:rem,
             code:$("input#valid-code").val()
         };

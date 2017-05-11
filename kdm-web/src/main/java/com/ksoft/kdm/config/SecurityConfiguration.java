@@ -79,7 +79,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and().csrf().disable()
                 .formLogin()
-                .loginPage("/login").loginProcessingUrl("/auth/login")
+                .loginProcessingUrl("/auth/login")
                 .usernameParameter("username").passwordParameter("password")
                 .failureHandler(authenticationFailureHandler()).successHandler(authenticationSuccessHandler())
                 .and().exceptionHandling().accessDeniedPage("/Access_Denied");
