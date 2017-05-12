@@ -46,7 +46,7 @@ public class OauthAccessConfirmationController {
             }
         }
         model.put("scopes", scopes);
-        return new ModelAndView("access_confirmation", model);
+        return new ModelAndView("oauth2/access_confirmation", model);
     }
 
     @RequestMapping("/oauth/error")
