@@ -52,7 +52,7 @@ public class OauthController {
     @RequestMapping("/oauth/error")
     public String handleError(Map<String, Object> model) throws Exception {
         model.put("message", "访问出错了！");
-        return "/oauth/oauth_error";
+        return "/oauth2/oauth_error";
     }
 
 	/*public void setClientDetailsService(ClientDetailsService clientDetailsService) {
