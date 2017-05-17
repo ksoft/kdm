@@ -22,7 +22,7 @@ import java.util.Map;
  */
 @Controller
 @SessionAttributes("authorizationRequest")
-public class OauthAccessConfirmationController {
+public class OauthController {
     @Autowired
     private ClientDetailsService clientDetailsService;
 
@@ -52,7 +52,7 @@ public class OauthAccessConfirmationController {
     @RequestMapping("/oauth/error")
     public String handleError(Map<String, Object> model) throws Exception {
         model.put("message", "访问出错了！");
-        return "oauth_error";
+        return "/oauth/oauth_error";
     }
 
 	/*public void setClientDetailsService(ClientDetailsService clientDetailsService) {

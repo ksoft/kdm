@@ -64,6 +64,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("/500").setViewName("common/500");
         registry.addViewController("/wc/grzx").setViewName("common/grzx");
         registry.addViewController("/users/pwd").setViewName("update-pwd");
+        registry.addRedirectViewController("/error","common/error");
         registry.addRedirectViewController("/","/index");
         registry.addRedirectViewController("/docs","/swagger-ui.html");
         super.addViewControllers(registry);
