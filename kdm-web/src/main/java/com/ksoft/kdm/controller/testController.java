@@ -4,8 +4,6 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.ksoft.kdm.common.PageDto;
 import com.ksoft.kdm.dto.*;
 import com.ksoft.kdm.service.StoreShowService;
-import com.ksoft.kdm.service.TyreBrandPatternSettingService;
-import com.ksoft.kdm.service.TyreBrandSettingService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -23,11 +21,6 @@ import java.util.Map;
 @Api(description = "DUBBO开发测试接口", value = "dubbo test")
 @Controller
 public class testController {
-
-    @Reference(version = "1.0.0")
-    private TyreBrandSettingService tyreBrandSettingService;
-    @Reference(version = "1.0.0")
-    private TyreBrandPatternSettingService tyreBrandPatternSettingService;
     @Reference(version = "1.0.0")
     private StoreShowService storeShowService;
 
@@ -48,16 +41,6 @@ public class testController {
         return ResponseDtoFactory.toSuccess(map);
     }
 
-    @RequestMapping(value="test",method = RequestMethod.GET)
-    @ResponseBody
-    public ResponseDto<Object> testPage(){
-        TyreBrandPatternSettingSearchDto searchDto = new TyreBrandPatternSettingSearchDto();
-        searchDto.setPageSize(10);
-        searchDto.setSort("MODIFY_TM DESC");
-        ResponseDto<PageDto<TyreBrandPatternSettingListDto>> responseDto = tyreBrandPatternSettingService.getPage(searchDto);
-        return ResponseDtoFactory.get(responseDto,responseDto.getData().getList());
-    }
-
     @RequestMapping(value="storeShowDetailPage",method = RequestMethod.POST)
     @ResponseBody
     public ResponseDto<PageDto<StoreShowDetailListDto>> storeShowDetailPage(@RequestBody StoreShowSearchDto searchDto){
@@ -67,37 +50,6 @@ public class testController {
         return responseDto;
     }
 
-    @RequestMapping(value="testSave",method = RequestMethod.POST)
-    @ResponseBody
-    public ResponseDto<Long> testSave(@RequestBody TyreBrandSettingDto dto){
-        if(null == dto){
-            dto = new TyreBrandSettingDto();
-            dto.setTyreBrandName("朝阳");
-            dto.setTyreBrandId(1);
-        }
-        return tyreBrandSettingService.save(dto);
-    }
-
-    @RequestMapping(value="testUpdate",method = RequestMethod.POST)
-    @ResponseBody
-    public ResponseDto testUpdate(@RequestBody TyreBrandPatternSettingDto dto){
-        if(null == dto){
-            dto = new TyreBrandPatternSettingDto();
-            dto.setTyreBrandName("朝阳");
-            dto.setTyreBrandId(1);
-        }
-        return tyreBrandPatternSettingService.update(dto);
-    }
-
-    @RequestMapping(value="testDel/{id}",method = RequestMethod.POST)
-    @ResponseBody
-    public ResponseDto<Object> testDel(@PathVariable Long id){
-        if(null == id){
-            ResponseDtoFactory.toError("id不能为空");
-        }
-        Boolean bool = tyreBrandPatternSettingService.delete(id);
-        return ResponseDtoFactory.toSuccess(bool.toString());
-    }
 
     //@ApiIgnore
     @ApiOperation(value = "删除卖家秀")
@@ -151,17 +103,5 @@ public class testController {
             @ApiParam(required = true,name = "status",value = "状态，启用:Y，禁用:N")
             @RequestParam(value = "status") String status){
         return storeShowService.setStatus(id,status);
-    }
-
-    //@ApiIgnore
-    @ApiOperation(value = "是否参加轮胎保")
-    @RequestMapping(value="/queryInsFlag",method = RequestMethod.POST)
-    @ResponseBody
-    public ResponseDto<Boolean> queryInsFlag(
-            @ApiParam(required = true,name = "tyre_brand_id",value = "轮胎品牌id")
-            @RequestParam(value = "tyre_brand_id") Long tyre_brand_id,
-            @ApiParam(required = true,name = "tyre_pattern_id",value = "轮胎花纹id")
-            @RequestParam(value = "tyre_pattern_id") Long tyre_pattern_id){
-        return tyreBrandPatternSettingService.queryInsFlag(tyre_brand_id,tyre_pattern_id);
     }
 }
