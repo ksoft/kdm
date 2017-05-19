@@ -48,7 +48,7 @@ public class UserDetailsService implements org.springframework.security.core.use
             throw new UserNotActivatedException("User " + lowercaseLogin + " is not activated");
         }
 
-        Collection<GrantedAuthority> grantedAuthorities = new ArrayList<>();
+        Collection<GrantedAuthority> grantedAuthorities = new ArrayList<GrantedAuthority>();
         for (Authority authority : userFromDatabase.getAuthorities()) {
             GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(authority.getName());
             grantedAuthorities.add(grantedAuthority);
