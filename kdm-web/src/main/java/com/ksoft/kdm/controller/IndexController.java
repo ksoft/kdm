@@ -2,15 +2,11 @@ package com.ksoft.kdm.controller;
 
 import com.alibaba.dubbo.common.utils.StringUtils;
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.ksoft.kdm.common.PageDto;
 import com.ksoft.kdm.common.constants.Constants;
 import com.ksoft.kdm.common.dto.CasualInfo;
 import com.ksoft.kdm.dto.ResponseDto;
 import com.ksoft.kdm.dto.ShowDzLogSaveDto;
-import com.ksoft.kdm.dto.StoreShowListDto;
-import com.ksoft.kdm.dto.StoreShowListSearchDto;
 import com.ksoft.kdm.service.MemberService;
-import com.ksoft.kdm.service.ShowService;
 import com.ksoft.kdm.service.StoreShowService;
 import com.ksoft.kdm.service.WechatService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,8 +48,6 @@ public class IndexController {
     private WechatService wechatService;
     @Autowired
     private MemberService memberService;
-    @Autowired
-    private ShowService showService;
 
     /**
      * ERROR页面
@@ -202,22 +196,6 @@ public class IndexController {
             response.addCookie(dzcookie);
         }
         return "tyreInfByBarcode";
-    }
-
-    /**
-     * 获取最新的卖家秀记录
-     * @param searchDto
-     * @return
-     */
-    @RequestMapping(value="/web/showNews",method = RequestMethod.POST)
-    @ResponseBody
-    public ResponseDto<PageDto<StoreShowListDto>> showNews(@RequestBody StoreShowListSearchDto searchDto, HttpServletRequest request){
-        searchDto.setSort("MODIFY_TM DESC,CREATE_TM DESC");
-        ResponseDto<PageDto<StoreShowListDto>> responseDto = storeShowService.getSimplePage(searchDto);
-        CasualInfo casualInfo = memberService.getCasualInfo(request);
-        //初始化点赞信息 最多100条数据
-        showService.initDzInfo(responseDto.getData().getList(),casualInfo.getId(),casualInfo.getSource());
-        return responseDto;
     }
 
 

@@ -1,14 +1,17 @@
 package com.ksoft.kdm.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.ksoft.kdm.common.PageDto;
-import com.ksoft.kdm.dto.*;
+import com.ksoft.kdm.dto.ResponseDto;
+import com.ksoft.kdm.dto.ResponseDtoFactory;
 import com.ksoft.kdm.service.StoreShowService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Map;
 
@@ -25,14 +28,6 @@ public class testController {
     private StoreShowService storeShowService;
 
 
-    @ApiOperation(value = "前端查看卖家秀详情")
-    @RequestMapping(value="getShowInfo",method = RequestMethod.POST)
-    @ResponseBody
-    public ResponseDto<StoreShowDto> getShowInfo(@RequestBody Long id){
-        ResponseDto<StoreShowDto> dto = storeShowService.getShowInfo(id);
-        return dto;
-    }
-
     @ApiOperation(value = "统计总发布量、门店量、轮胎规格")
     @RequestMapping(value="statisticStoreAndSpec",method = RequestMethod.GET)
     @ResponseBody
@@ -41,33 +36,6 @@ public class testController {
         return ResponseDtoFactory.toSuccess(map);
     }
 
-    @RequestMapping(value="storeShowDetailPage",method = RequestMethod.POST)
-    @ResponseBody
-    public ResponseDto<PageDto<StoreShowDetailListDto>> storeShowDetailPage(@RequestBody StoreShowSearchDto searchDto){
-        searchDto.setPageSize(10);
-        searchDto.setSort("MODIFY_TM DESC");
-        ResponseDto<PageDto<StoreShowDetailListDto>> responseDto = storeShowService.getDetailPage(searchDto);
-        return responseDto;
-    }
-
-
-    //@ApiIgnore
-    @ApiOperation(value = "删除卖家秀")
-    @RequestMapping(value="/delete",method = RequestMethod.POST)
-    @ResponseBody
-    public ResponseDto<Boolean> delete(
-            @ApiParam(required = true,name="id",value = "卖家秀id")
-            @RequestParam(value = "id") Long id){
-        return storeShowService.delete(id);
-    }
-
-    //@ApiIgnore
-    @ApiOperation(value = "编辑卖家秀")
-    @RequestMapping(value="/update",method = RequestMethod.POST)
-    @ResponseBody
-    public ResponseDto<Boolean> update(StoreShowEditDto storeShowEditDto){
-        return storeShowService.update(storeShowEditDto);
-    }
 
     //@ApiIgnore
     @ApiOperation(value = "卖家秀打标")

@@ -47,19 +47,3 @@ eureka:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
-
-mybatis:
-  #config-location: config/mybatis-config.xml
-
-mapper:
-    mappers:
-        - com.ksoft.kdm.common.BaseMapper
-    not-empty: false
-    identity: MYSQL
-
-#pagehelper
-pagehelper:
-  #当该参数设置为 true 时，pageNum<=0 时会查询第一页， pageNum>pages（超过总数时），会查询最后一页
-  reasonable: false
-  #当该参数设置为true时，使用 RowBounds 分页会进行 count 查询
-  rowBoundsWithCount: true

@@ -1,7 +1,9 @@
 package com.ksoft.kdm.service;
 
-import com.ksoft.kdm.common.PageDto;
-import com.ksoft.kdm.dto.*;
+import com.ksoft.kdm.dto.ResponseDto;
+import com.ksoft.kdm.dto.ShowDzLogDto;
+import com.ksoft.kdm.dto.ShowDzLogSaveDto;
+import com.ksoft.kdm.dto.ShowDzLogSearchDto;
 
 import java.util.List;
 import java.util.Map;
@@ -13,38 +15,6 @@ import java.util.Map;
  * @date 2017/4/14
  */
 public interface StoreShowService {
-
-    /**
-     * 前端卖家秀分页
-     * @param searchDto
-     * @return
-     */
-    ResponseDto<PageDto<StoreShowListDto>> getSimplePage(StoreShowListSearchDto searchDto);
-
-    /**
-     * 后台卖家秀分页
-     * @param searchDto
-     * @return
-     */
-    ResponseDto<PageDto<StoreShowDetailListDto>> getDetailPage(StoreShowSearchDto searchDto);
-
-    /**
-     * 前端查询卖家秀信息
-     * @param id
-     * @return
-     */
-    ResponseDto<StoreShowDto> getShowInfo(Long id);
-
-    ResponseDto<Long> save(StoreShowSaveDto dto);
-
-    ResponseDto<Boolean> delete(Long id);
-
-    /**
-     * 编辑卖家秀
-     * @param dto
-     * @return
-     */
-    ResponseDto<Boolean> update(StoreShowEditDto dto);
 
     /**
      * 卖家秀打标
