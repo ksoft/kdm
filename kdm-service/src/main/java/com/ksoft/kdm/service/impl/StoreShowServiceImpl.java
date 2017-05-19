@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @author HZH
  * @date 2017/4/14
  */
-@Service(version = "1.0.0",interfaceClass = StoreShowService.class,group = "kdm")
+@Service(version = "1.0.0",interfaceClass = StoreShowService.class)
 @Transactional
 public class StoreShowServiceImpl implements StoreShowService {
 
