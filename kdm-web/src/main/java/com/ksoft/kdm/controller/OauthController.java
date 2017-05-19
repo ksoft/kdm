@@ -62,4 +62,10 @@ public class OauthController {
 	public void setApprovalStore(ApprovalStore approvalStore) {
 		this.approvalStore = approvalStore;
 	}*/
+
+    @RequestMapping("/oauth/authKdm")
+    public String authKdm(String client_id,String response_type,String redirect_uri) throws Exception {
+
+        return "/oauth2/oauth_error";
+    }
 }

@@ -5,6 +5,7 @@ import com.ksoft.kdm.common.constants.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 
 import javax.imageio.ImageIO;
@@ -15,6 +16,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 /**
+ * 登录接口
  * @author zhangjianbo
  * @date 2017/5/11
  */
@@ -23,9 +25,29 @@ public class LoginController {
     @Autowired
     private DefaultKaptcha defaultKaptcha;
 
+    /**
+     * 本系统登录
+     * @return
+     */
     @GetMapping(value = "login")
     public String login(){
         return "login/login";
+    }
+
+    /**
+     * 第三方登录
+     * @param client_id
+     * @param response_type
+     * @param redirect_uri
+     * @return
+     */
+    @GetMapping(value = "kdmAuth/login")
+    public ModelAndView  cuslogin(String client_id,String response_type,String redirect_uri){
+        ModelAndView modelAndView=new ModelAndView("oauth2/kdmAuth");
+        modelAndView.addObject("client_id",client_id);
+        modelAndView.addObject("response_type",response_type);
+        modelAndView.addObject("redirect_uri",redirect_uri);
+        return modelAndView;
     }
 
     @GetMapping(value = "index")

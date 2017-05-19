@@ -29,7 +29,8 @@ import org.springframework.util.StringUtils;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-    private static final String AUTHENTICATE_ENDPOINT = "/auth/login";
+    private static final String AUTHENTICATE_ENDPOINT = "/auth/login";//系统登录页面，security放行
+    private static final String CUS_AUTHENTICATE_ENDPOINT = "/kdmAuth/login";//第三方授权登录页面，security放行
     private static final String REMEMBER_ME_KEY ="rescue-remember-me";
     private static final String cookieName="KDM-COOKIE";
     private static final String cookieDomain="localhost";
@@ -139,7 +140,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionAuthenticationStrategy(sessionAuthenticationStrategy()).sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/login",AUTHENTICATE_ENDPOINT).permitAll()
+                .antMatchers("/login",AUTHENTICATE_ENDPOINT,CUS_AUTHENTICATE_ENDPOINT).permitAll()
                 .anyRequest().authenticated()
                 .and().csrf().disable()
                 .formLogin()

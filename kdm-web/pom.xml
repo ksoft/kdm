@@ -195,6 +195,12 @@
 			<artifactId>thymeleaf-extras-springsecurity4</artifactId>
 			<version>2.1.2.RELEASE</version>
 		</dependency>
+		<!-- thymleaf 验证html -->
+		<dependency>
+			<groupId>net.sourceforge.nekohtml</groupId>
+			<artifactId>nekohtml</artifactId>
+			<version>1.9.22</version>
+		</dependency>
 
 <!--		<dependency>
 			<groupId>org.springframework.boot</groupId>
