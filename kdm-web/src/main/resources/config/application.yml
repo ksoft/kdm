@@ -47,7 +47,7 @@ spring:
 
 dubbo:
   app-name: kdm-comsummer
-  group: test
+  group: dubbo
   protocol-name: dubbo
   owner: kdm
   service-group: kdm

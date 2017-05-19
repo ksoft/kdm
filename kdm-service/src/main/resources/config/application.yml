@@ -24,7 +24,7 @@ spring:
 
 dubbo:
   app-name: kdm-provider
-  group: test
+  group: dubbo
   protocol-name: dubbo
   owner: kdm
   service-group: kdm

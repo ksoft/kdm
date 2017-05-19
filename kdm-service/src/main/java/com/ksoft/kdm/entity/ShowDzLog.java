@@ -1,8 +1,7 @@
 package com.ksoft.kdm.entity;
 
+
 import com.ksoft.kdm.common.BaseEntity;
-import com.ksoft.kdm.enums.DzChannelEnum;
-import com.ksoft.kdm.enums.ReadFlagEnum;
 
 import javax.persistence.Table;
 import java.sql.Timestamp;
@@ -25,10 +24,6 @@ public class ShowDzLog extends BaseEntity {
     private String storeIconUrl;
     /** 点赞时间 */
     private Timestamp createTm;
-    /** N:未读，Y:已读 */
-    private ReadFlagEnum readFlag;
-    /** 点赞来源 APP:APP，WX:微信，QT:其它 */
-    private DzChannelEnum dzChannel;
 
     public Long getShowId() {
         return showId;
@@ -36,14 +31,6 @@ public class ShowDzLog extends BaseEntity {
 
     public void setShowId(Long showId) {
         this.showId = showId;
-    }
-
-    public ReadFlagEnum getReadFlag() {
-        return readFlag;
-    }
-
-    public void setReadFlag(ReadFlagEnum readFlag) {
-        this.readFlag = readFlag;
     }
 
     public String getCreateBy() {
@@ -54,14 +41,6 @@ public class ShowDzLog extends BaseEntity {
         this.createBy = createBy;
     }
 
-    public DzChannelEnum getDzChannel() {
-        return dzChannel;
-    }
-
-    public void setDzChannel(DzChannelEnum dzChannel) {
-        this.dzChannel = dzChannel;
-    }
-
     public String getCreateByName() {
         return createByName;
     }
@@ -70,19 +49,19 @@ public class ShowDzLog extends BaseEntity {
         this.createByName = createByName;
     }
 
-    public Timestamp getCreateTm() {
-        return createTm;
-    }
-
-    public void setCreateTm(Timestamp createTm) {
-        this.createTm = createTm;
-    }
-
     public String getStoreIconUrl() {
         return storeIconUrl;
     }
 
     public void setStoreIconUrl(String storeIconUrl) {
         this.storeIconUrl = storeIconUrl;
+    }
+
+    public Timestamp getCreateTm() {
+        return createTm;
+    }
+
+    public void setCreateTm(Timestamp createTm) {
+        this.createTm = createTm;
     }
 }
