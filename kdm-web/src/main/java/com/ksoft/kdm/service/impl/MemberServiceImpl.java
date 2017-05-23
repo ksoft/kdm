@@ -5,11 +5,13 @@ import com.ksoft.kdm.common.constants.Constants;
 import com.ksoft.kdm.common.dto.CasualInfo;
 import com.ksoft.kdm.common.dto.MemberInfo;
 import com.ksoft.kdm.common.util.HttpKit;
+import com.ksoft.kdm.dto.ShowDzLogDto;
 import com.ksoft.kdm.enums.DzChannelEnum;
 import com.ksoft.kdm.service.MemberService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.Cookie;
@@ -104,5 +106,16 @@ public class MemberServiceImpl implements MemberService {
             casualInfo.setSource(DzChannelEnum.QT);
         }
         return casualInfo;
+    }
+
+    @Cacheable(value = "usercache",key = "#firstName")
+    public ShowDzLogDto findUser(Long id, String firstName, String lastName){
+        System.out.println("无缓存的时候调用这里");
+        ShowDzLogDto dto=new ShowDzLogDto();
+        dto.setId(id);
+        dto.setStoreName(firstName);
+        dto.setPhotoUrl(lastName);
+        System.out.println(dto.getStoreName());
+        return dto;
     }
 }

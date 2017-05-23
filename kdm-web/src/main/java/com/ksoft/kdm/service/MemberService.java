@@ -2,6 +2,7 @@ package com.ksoft.kdm.service;
 
 import com.ksoft.kdm.common.dto.CasualInfo;
 import com.ksoft.kdm.common.dto.MemberInfo;
+import com.ksoft.kdm.dto.ShowDzLogDto;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -18,4 +19,6 @@ public interface MemberService {
     public MemberInfo getPrincipal();
 
     public CasualInfo getCasualInfo(HttpServletRequest request);
+
+    public ShowDzLogDto findUser(Long id, String firstName, String lastName);
 }

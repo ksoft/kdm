@@ -1,6 +1,7 @@
 package com.zcckj.storeshow;
 
 import com.ksoft.kdm.KdmWebApplication;
+import com.ksoft.kdm.service.MemberService;
 import com.ksoft.kdm.service.RedisService;
 import org.junit.Assert;
 import org.junit.Test;
@@ -26,6 +27,8 @@ public class TestRedis {
 	@Autowired
 	private RedisService redisService;
 
+	@Autowired
+	private MemberService memberService;
 	@Test
 	public void test() throws Exception {
 		// 保存字符串
@@ -38,5 +41,16 @@ public class TestRedis {
 	public void tt() throws Exception{
 		redisService.set("ttt","3333");
 		System.out.println(redisService.get("ttt"));
+	}
+
+	@Test
+	public void test3() throws Exception{
+		memberService.findUser(3L,"a","b");
+
+		memberService.findUser(3L,"a","b");
+
+		memberService.findUser(3L,"b","b");
+
+		memberService.findUser(3L,"c","b");
 	}
 }
