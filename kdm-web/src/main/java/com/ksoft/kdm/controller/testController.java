@@ -32,4 +32,6 @@ public class testController {
             @RequestParam(value = "id") Long id){
         return storeShowService.delete(id);
     }
+
+
 }
