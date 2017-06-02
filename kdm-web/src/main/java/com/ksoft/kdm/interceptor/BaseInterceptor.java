@@ -1,16 +1,20 @@
 package com.ksoft.kdm.interceptor;
 
+import com.ksoft.kdm.common.annotation.KdmAuth;
 import com.ksoft.kdm.config.AppConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.lang.reflect.Method;
 
 /**
  * @author zhangjianbo
@@ -33,6 +37,16 @@ public class BaseInterceptor implements HandlerInterceptor {
             LOGGER.debug("非开发环境，静态资源为静态资源服务器");
             request.setAttribute("staticPath", config.getStaticPath());
         }
+
+        //获取方法上的注解
+        HandlerMethod hm=(HandlerMethod)handler;
+        Method method=hm.getMethod(); if(method.getDeclaringClass().isAnnotationPresent(Controller.class)){
+            if(method.isAnnotationPresent(KdmAuth.class))
+            {
+                System.out.println(method.getAnnotation(KdmAuth.class).role());
+            }
+        }
+
         return true;
     }
 

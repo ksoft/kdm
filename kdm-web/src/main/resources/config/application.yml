@@ -23,7 +23,7 @@ swaggerVersion: 1.0
 logging:
   config: classpath:config/logback-spring.xml
 server:
-  port: 8082
+  port: 8092
   tomcat:
     access_log_enabled: true
     basedir: target/tomcat

@@ -1,6 +1,7 @@
 package com.ksoft.kdm.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.ksoft.kdm.common.annotation.KdmAuth;
 import com.ksoft.kdm.dto.ResponseDto;
 import com.ksoft.kdm.dto.ResponseDtoFactory;
 import com.ksoft.kdm.service.StoreShowService;
@@ -38,8 +39,9 @@ public class testController {
         return storeShowService.delete(id);
     }
 
-    @RequestMapping(value = "/first", method = RequestMethod.GET)
+    @RequestMapping(value = "/web/first", method = RequestMethod.GET)
     @ResponseBody
+    @KdmAuth(role = "ADMIN333")
     public ResponseDto<Map<String, Object>> firstResp (HttpServletRequest request){
         Map<String, Object> map = new HashMap<>();
         request.getSession().setAttribute("request Url", request.getRequestURL());
